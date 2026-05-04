@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"/>
+<title>eSIM.World — обзор, тарифы, покрытие и активация | Paybeam</title>
+<meta name="description" content="Подробный обзор eSIM.World на Paybeam: тарифы от 315₽, 195 стран, 5G в 84 странах, оплата СБП и российскими картами, поддержка на русском."/>
+<style>
+:root{
+  --bg:#0f1219;
+  --bg2:#131823;
+  --card:#161d2b;
+  --card2:#1a2133;
+  --border:#1e2a3f;
+  --border2:#243048;
+  --accent:#00cc7a;
+  --accent-dim:rgba(0,204,122,.12);
+  --accent-hover:#00b36c;
+  --text:#e8edf5;
+  --text-soft:#8b9ab0;
+  --text-muted:#4a5a72;
+  --red:#ff4d5e;
+  --red-dim:rgba(255,77,94,.12);
+  --green:#00cc7a;
+  --green-dim:rgba(0,204,122,.12);
+  --amber:#f59e0b;
+  --blue:#3b82f6;
+  --radius:14px;
+  --radius-sm:10px;
+  --radius-lg:20px;
+  --shadow:0 4px 24px rgba(0,0,0,.35);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.25);
+  --container:1200px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer}
+h1,h2,h3,h4{line-height:1.25;letter-spacing:-.02em}
+.container{max-width:var(--container);margin:0 auto;padding:0 24px}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:100;background:rgba(13,17,26,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav-inner{display:flex;align-items:center;gap:18px;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:16px;letter-spacing:.04em;color:#fff;flex-shrink:0}
+.logo-mark{background:linear-gradient(135deg,#00cc7a,#0066ff);width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-size:13px;font-weight:900;color:#fff}
+.nav-search{flex:1;max-width:240px;position:relative}
+.nav-search input{width:100%;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 14px;font-size:13px;color:var(--text-soft);outline:none}
+.nav-search input::placeholder{color:var(--text-muted)}
+.nav-links{display:flex;gap:20px;margin-left:8px}
+.nav-links a{font-size:14px;color:var(--text-soft);font-weight:500;white-space:nowrap}
+.nav-links a:hover{color:var(--text)}
+.nav-right{margin-left:auto;display:flex;gap:8px;align-items:center;flex-shrink:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 16px;border-radius:10px;font-weight:600;font-size:13px;border:1px solid transparent;transition:all .15s ease;white-space:nowrap}
+.btn-ghost{background:transparent;color:var(--text-soft);border-color:var(--border2)}
+.btn-ghost:hover{background:var(--card2);color:var(--text)}
+.btn-accent{background:var(--accent);color:#000;font-weight:700}
+.btn-accent:hover{background:var(--accent-hover)}
+.btn-lg{padding:12px 20px;font-size:14px;border-radius:12px}
+.btn-outline{background:transparent;color:var(--text-soft);border-color:var(--border2)}
+.btn-outline:hover{background:var(--card2);color:var(--text)}
+
+/* BREADCRUMBS */
+.crumbs{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--text-muted);padding:16px 0 0}
+.crumbs a{color:var(--text-muted)}
+.crumbs a:hover{color:var(--text-soft)}
+.crumbs .sep{color:var(--text-muted)}
+.crumbs .cur{color:var(--text-soft)}
+
+/* PAGE LAYOUT */
+.page{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:20px 0 80px;align-items:start}
+
+/* SIDEBAR */
+.sidebar{position:sticky;top:76px}
+.sidebar-block{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:12px}
+.sidebar-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);padding:14px 16px 8px}
+.toc-links{list-style:none}
+.toc-links a{display:block;padding:9px 16px;font-size:13px;color:var(--text-soft);border-left:2px solid transparent;transition:all .1s ease}
+.toc-links a:hover,.toc-links a.active{color:var(--text);background:var(--card2);border-left-color:var(--accent)}
+.ref-block{background:linear-gradient(135deg,rgba(0,204,122,.08),rgba(0,102,255,.06));border:1px solid rgba(0,204,122,.2);border-radius:var(--radius);padding:14px 16px}
+.ref-block .ref-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.ref-block .ref-code{font-size:14px;font-weight:700;color:#fff}
+.ref-block .ref-desc{font-size:12px;color:var(--text-soft);margin-top:3px}
+
+/* MAIN CONTENT */
+.main-content{}
+
+/* SERVICE CARD */
+.service-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin-bottom:20px}
+.service-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:20px}
+.service-logo{width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,#ff6b35,#f50057);display:grid;place-items:center;font-weight:900;font-size:22px;color:#fff;flex-shrink:0}
+.service-head{flex:1}
+.service-name-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:4px}
+.service-name{font-size:22px;font-weight:800;color:#fff}
+.service-rank{background:var(--accent-dim);color:var(--accent);font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px}
+.service-updated{font-size:12px;color:var(--text-muted);margin-bottom:8px}
+.service-rating-row{display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text-soft)}
+.stars{color:#f59e0b;letter-spacing:1px}
+.rating-val{font-weight:700;color:#fff}
+.service-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+.stat-box{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:12px 14px;text-align:center}
+.stat-box .sv{font-size:24px;font-weight:800;color:#fff;line-height:1}
+.stat-box .sl{font-size:11px;color:var(--text-soft);margin-top:4px;text-transform:uppercase;letter-spacing:.04em}
+.stat-box.accent-box .sv{color:var(--accent)}
+.service-chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:18px}
+.chip{display:inline-flex;align-items:center;gap:5px;background:var(--card2);border:1px solid var(--border2);padding:6px 11px;border-radius:999px;font-size:12px;color:var(--text-soft);font-weight:500}
+.chip.ok{color:var(--accent);border-color:rgba(0,204,122,.3);background:var(--accent-dim)}
+.chip.na{color:var(--text-muted)}
+.service-actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.btn-service{display:inline-flex;align-items:center;gap:7px;padding:12px 20px;border-radius:12px;font-weight:700;font-size:14px;border:1px solid transparent;transition:all .15s ease}
+.btn-service-primary{background:var(--accent);color:#000}
+.btn-service-primary:hover{background:var(--accent-hover)}
+.btn-service-sec{background:var(--card2);color:var(--text-soft);border-color:var(--border2)}
+.btn-service-sec:hover{background:var(--border);color:var(--text)}
+.ref-note{font-size:12px;color:var(--text-muted)}
+.ref-note span{color:var(--accent);font-weight:600}
+
+/* RECOMMENDATION */
+.rec-card{background:var(--card2);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:28px;display:flex;align-items:flex-start;gap:14px}
+.rec-icon{width:36px;height:36px;border-radius:10px;background:rgba(245,158,11,.15);color:var(--amber);display:grid;place-items:center;font-size:18px;flex-shrink:0}
+.rec-content{flex:1}
+.rec-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:4px}
+.rec-text{font-size:13px;color:var(--text-soft);line-height:1.55}
+.rec-cta{background:var(--accent);color:#000;font-size:13px;font-weight:700;padding:8px 16px;border-radius:9px;border:0;flex-shrink:0;align-self:center}
+.rec-cta:hover{background:var(--accent-hover)}
+
+/* SECTIONS */
+.section{margin-bottom:48px}
+.section-eyebrow{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.section-title{font-size:26px;font-weight:800;color:#fff;margin-bottom:6px}
+.section-desc{font-size:14px;color:var(--text-soft);margin-bottom:20px}
+
+/* CALCULATOR */
+.calc-wrap{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden}
+.calc-header{display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-bottom:1px solid var(--border);cursor:pointer}
+.calc-header .ch-left{display:flex;align-items:center;gap:10px}
+.calc-sigma{width:32px;height:32px;background:var(--accent-dim);border-radius:9px;display:grid;place-items:center;color:var(--accent);font-weight:800;font-size:15px}
+.calc-title{font-size:15px;font-weight:700;color:#fff}
+.calc-toggle{color:var(--text-muted);font-size:18px;transition:transform .2s ease}
+.calc-body{display:grid;grid-template-columns:1.3fr 1fr;gap:0}
+.calc-left{padding:22px;border-right:1px solid var(--border)}
+.calc-right{padding:22px;background:var(--card2)}
+.field-label{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--text-muted);margin-bottom:10px}
+.country-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:18px}
+.country-btn{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:8px 6px;font-size:12px;color:var(--text-soft);font-weight:500;text-align:center;cursor:pointer;transition:all .1s ease;display:flex;align-items:center;justify-content:center;gap:4px}
+.country-btn:hover{border-color:var(--border2);color:var(--text)}
+.country-btn.active{background:var(--accent-dim);border-color:rgba(0,204,122,.4);color:var(--accent);font-weight:700}
+.country-flag{font-size:14px}
+.duration-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.duration-val{font-size:22px;font-weight:800;color:#fff}
+.duration-unit{font-size:13px;color:var(--text-soft)}
+.range-track{width:100%;height:4px;border-radius:999px;background:var(--border2);appearance:none;outline:none;margin-bottom:6px;-webkit-appearance:none;cursor:pointer}
+.range-track::-webkit-slider-thumb{width:18px;height:18px;border-radius:50%;background:var(--accent);border:3px solid var(--bg);-webkit-appearance:none;cursor:pointer;box-shadow:0 0 0 2px var(--accent-dim)}
+.range-labels{display:flex;justify-content:space-between;font-size:11px;color:var(--text-muted);margin-bottom:18px}
+.profile-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:16px}
+.profile-btn{background:var(--card2);border:1px solid var(--border);border-radius:9px;padding:10px 8px;cursor:pointer;text-align:center;transition:all .1s ease}
+.profile-btn:hover{border-color:var(--border2)}
+.profile-btn.active{background:var(--accent-dim);border-color:rgba(0,204,122,.4)}
+.profile-btn .pb-name{font-size:12px;font-weight:600;color:var(--text);margin-bottom:2px}
+.profile-btn.active .pb-name{color:var(--accent)}
+.profile-btn .pb-sub{font-size:11px;color:var(--text-muted)}
+.check-row{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-soft);margin-bottom:8px;cursor:pointer}
+.check-row input[type=checkbox]{width:16px;height:16px;accent-color:var(--accent);cursor:pointer}
+
+/* RESULT BOX */
+.result-box{height:100%}
+.result-badge{display:inline-block;background:var(--accent);color:#000;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:12px}
+.result-plan{font-size:20px;font-weight:800;color:#fff;margin-bottom:2px}
+.result-sub{font-size:12px;color:var(--text-soft);margin-bottom:14px}
+.result-price{margin-bottom:16px}
+.result-price .price-main{font-size:42px;font-weight:900;color:#fff;letter-spacing:-.03em;line-height:1}
+.result-price .price-per{font-size:13px;color:var(--accent);font-weight:600;margin-top:2px}
+.result-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.result-meta-item{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:9px 12px}
+.result-meta-item .rk{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-muted);margin-bottom:3px}
+.result-meta-item .rv{font-size:13px;font-weight:600;color:var(--text)}
+.btn-buy{width:100%;padding:14px;background:var(--accent);color:#000;border:0;border-radius:12px;font-size:15px;font-weight:800;margin-bottom:10px;transition:background .15s ease}
+.btn-buy:hover{background:var(--accent-hover)}
+.result-disclaimer{font-size:11px;color:var(--text-muted);text-align:center}
+
+/* SCENARIOS */
+.scenarios{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.scenario-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;cursor:pointer;transition:border-color .15s ease,transform .1s ease}
+.scenario-card:hover{border-color:rgba(0,204,122,.3);transform:translateY(-2px)}
+.sc-region{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-muted);margin-bottom:4px}
+.sc-title{font-size:15px;font-weight:700;color:#fff;margin-bottom:2px}
+.sc-desc{font-size:12px;color:var(--text-soft);margin-bottom:12px}
+.sc-price-row{display:flex;align-items:center;justify-content:space-between}
+.sc-price{font-size:16px;font-weight:800;color:#fff}
+.sc-price small{font-size:12px;font-weight:500;color:var(--text-muted)}
+.sc-link{font-size:12px;color:var(--accent);font-weight:600}
+
+@media(max-width:1100px){.page{grid-template-columns:1fr}.sidebar{display:none}}
+@media(max-width:780px){
+  .calc-body{grid-template-columns:1fr}
+  .calc-left{border-right:0;border-bottom:1px solid var(--border)}
+  .country-grid{grid-template-columns:repeat(3,1fr)}
+  .service-stats{grid-template-columns:repeat(2,1fr)}
+  .scenarios{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#">
+      <span class="logo-mark">P</span>
+      PAYBEAM
+    </a>
+    <div class="nav-search">
+      <input type="text" placeholder="Найти сервис..."/>
+    </div>
+    <nav class="nav-links">
+      <a href="#">Главная</a>
+      <a href="#">Пополнить Steam</a>
+      <a href="#">Список сервисов</a>
+      <a href="#">Рейтинг ▾</a>
+      <a href="#">Партнёрам</a>
+      <a href="#">Войти</a>
+    </nav>
+    <div class="nav-right">
+      <button class="btn btn-accent">Регистрация</button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="crumbs">
+    <a href="#">Главная</a>
+    <span class="sep">›</span>
+    <a href="#">Рейтинг eSIM</a>
+    <span class="sep">›</span>
+    <span class="cur">eSIM.World</span>
+  </div>
+</div>
+
+<div class="container">
+  <div class="page">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-block">
+        <div class="sidebar-label">Содержание</div>
+        <ul class="toc-links">
+          <li><a href="#about" class="active">О сервисе</a></li>
+          <li><a href="#rec">Кратко рекомендуем</a></li>
+          <li><a href="#calc">Подобрать тариф</a></li>
+          <li><a href="#scenarios">Сценарии</a></li>
+          <li><a href="#tariffs">Все тарифы</a></li>
+          <li><a href="#coverage">Покрытие</a></li>
+          <li><a href="#compat">Совместимость</a></li>
+          <li><a href="#activation">Активация</a></li>
+          <li><a href="#errors">Ошибки и решения</a></li>
+          <li><a href="#compare">Сравнение с конкурентами</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#faq">FAQ для России</a></li>
+        </ul>
+      </div>
+      <div class="ref-block">
+        <div class="ref-label">Реферальная скидка</div>
+        <div class="ref-code">−7% по промокоду</div>
+        <div class="ref-code" style="color:var(--accent);font-size:16px;margin-top:2px">PAYBEAM7</div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <!-- SERVICE CARD -->
+      <div class="service-card" id="about">
+        <div class="service-top">
+          <div class="service-logo">e.</div>
+          <div class="service-head">
+            <div class="service-name-row">
+              <span class="service-name">eSIM.World</span>
+              <span class="service-rank">#4 в рейтинге Paybeam</span>
+            </div>
+            <div class="service-updated">Обновлено 04 мая 2026</div>
+            <div class="service-rating-row">
+              <span class="stars">★★★★★</span>
+              <span class="rating-val">4.6</span>
+              <span>1&nbsp;284 отзывов</span>
+              <span>·</span>
+              <span>последний 2 мая 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="service-stats">
+          <div class="stat-box">
+            <div class="sv">195</div>
+            <div class="sl">Стран</div>
+          </div>
+          <div class="stat-box">
+            <div class="sv" style="color:#3b82f6">84</div>
+            <div class="sl">С 5G</div>
+          </div>
+          <div class="stat-box accent-box">
+            <div class="sv">315<span style="font-size:14px">₽</span></div>
+            <div class="sl">от</div>
+          </div>
+          <div class="stat-box">
+            <div class="sv">95<span style="font-size:14px">₽</span></div>
+            <div class="sl">Цена/ГБ</div>
+          </div>
+        </div>
+
+        <div class="service-chips">
+          <span class="chip ok">✓ СБП</span>
+          <span class="chip ok">✓ Российские карты</span>
+          <span class="chip ok">✓ Рубли</span>
+          <span class="chip ok">✓ Поддержка на русском</span>
+          <span class="chip ok">✓ Top-up (пополнение)</span>
+          <span class="chip ok">✓ Безлимит в 84 странах</span>
+          <span class="chip ok">✓ Hotspot</span>
+          <span class="chip na">✗ Голос/SMS</span>
+        </div>
+
+        <div class="service-actions">
+          <a href="#" class="btn-service btn-service-primary">Перейти на eSIM.World →</a>
+          <a href="#" class="btn-service btn-service-sec">Сравнить с другими</a>
+        </div>
+        <div class="ref-note">реферальная ссылка · <span>−7% по PAYBEAM7</span></div>
+      </div>
+
+      <!-- RECOMMENDATION -->
+      <div class="rec-card" id="rec">
+        <div class="rec-icon">★</div>
+        <div class="rec-content">
+          <div class="rec-label">Кратко</div>
+          <div class="rec-text">Для поездки в Турцию на 7 дней — пакет «Турция · 5 ГБ · 7 дней» за 690 ₽. Оплата по СБП, активация по QR за 2 минуты.</div>
+        </div>
+        <button class="rec-cta">Купить за 690 ₽</button>
+      </div>
+
+      <!-- CALCULATOR -->
+      <div class="section" id="calc">
+        <div class="section-eyebrow">Калькулятор</div>
+        <div class="section-title">Подобрать тариф под поездку</div>
+        <div class="section-desc">Укажите страну, длительность и профиль использования — мы подберём оптимальный пакет.</div>
+
+        <div class="calc-wrap">
+          <div class="calc-header" onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='none'?'grid':'none'">
+            <div class="ch-left">
+              <div class="calc-sigma">Σ</div>
+              <span class="calc-title">Калькулятор тарифа</span>
+            </div>
+            <span class="calc-toggle">−</span>
+          </div>
+          <div class="calc-body">
+            <div class="calc-left">
+              <div class="field-label">Куда едете</div>
+              <div class="country-grid" id="countryGrid">
+                <button class="country-btn active" data-country="Турция" data-price="690" onclick="selectCountry(this)"><span class="country-flag">🇹🇷</span> Турция</button>
+                <button class="country-btn" data-country="Европа" data-price="1890" onclick="selectCountry(this)"><span class="country-flag">🇪🇺</span> Европа</button>
+                <button class="country-btn" data-country="Азия" data-price="1290" onclick="selectCountry(this)"><span class="country-flag">🌏</span> Азия</button>
+                <button class="country-btn" data-country="США" data-price="1490" onclick="selectCountry(this)"><span class="country-flag">🇺🇸</span> США</button>
+                <button class="country-btn" data-country="Великобритания" data-price="990" onclick="selectCountry(this)"><span class="country-flag">🇬🇧</span> Великобритания</button>
+                <button class="country-btn" data-country="ОАЭ" data-price="1100" onclick="selectCountry(this)"><span class="country-flag">🇦🇪</span> ОАЭ</button>
+                <button class="country-btn" data-country="Таиланд" data-price="790" onclick="selectCountry(this)"><span class="country-flag">🇹🇭</span> Таиланд</button>
+                <button class="country-btn" data-country="Индонезия" data-price="990" onclick="selectCountry(this)"><span class="country-flag">🇮🇩</span> Индонезия</button>
+                <button class="country-btn" data-country="Китай" data-price="1200" onclick="selectCountry(this)"><span class="country-flag">🇨🇳</span> Китай</button>
+                <button class="country-btn" data-country="Глобал" data-price="3490" onclick="selectCountry(this)"><span class="country-flag">🌍</span> Глобал</button>
+              </div>
+
+              <div class="field-label">Длительность поездки</div>
+              <div class="duration-row">
+                <div><span class="duration-val" id="durVal">7</span> <span class="duration-unit">дней</span></div>
+              </div>
+              <input type="range" class="range-track" min="1" max="90" value="7" id="durRange" oninput="updateDur(this.value)"/>
+              <div class="range-labels"><span>1 день</span><span>30</span><span>60</span><span>90 дней</span></div>
+
+              <div class="field-label">Профиль использования</div>
+              <div class="profile-btns">
+                <button class="profile-btn" onclick="selectProfile(this,0.3)">
+                  <div class="pb-name">Карты, мессенджеры</div>
+                  <div class="pb-sub">~0,3 ГБ/день</div>
+                </button>
+                <button class="profile-btn active" onclick="selectProfile(this,1)">
+                  <div class="pb-name">Соцсети, сторис</div>
+                  <div class="pb-sub">~1 ГБ/день</div>
+                </button>
+                <button class="profile-btn" onclick="selectProfile(this,2.5)">
+                  <div class="pb-name">Видео, стриминг</div>
+                  <div class="pb-sub">~2,5 ГБ/день</div>
+                </button>
+              </div>
+
+              <label class="check-row">
+                <input type="checkbox" id="needVoice" onchange="updateResult()"/>
+                Нужен голос/SMS
+              </label>
+              <label class="check-row">
+                <input type="checkbox" id="needHotspot" checked onchange="updateResult()"/>
+                Раздавать интернет (hotspot)
+              </label>
+            </div>
+
+            <div class="calc-right">
+              <div class="result-box">
+                <div class="result-badge">Рекомендуем</div>
+                <div class="result-plan" id="rPlan">7 ГБ · 7 дн</div>
+                <div class="result-sub" id="rSub">Только интернет + hotspot · 1 страна</div>
+                <div class="result-price">
+                  <div class="price-main" id="rPrice">665 ₽</div>
+                  <div class="price-per" id="rPer">−95 ₽/день</div>
+                </div>
+                <div class="result-meta">
+                  <div class="result-meta-item"><div class="rk">Сеть</div><div class="rv" id="rNet">5G/4G+</div></div>
+                  <div class="result-meta-item"><div class="rk">Hotspot</div><div class="rv" id="rHs">да</div></div>
+                  <div class="result-meta-item"><div class="rk">Активация</div><div class="rv">QR · 2 мин</div></div>
+                  <div class="result-meta-item"><div class="rk">Top-up</div><div class="rv">да</div></div>
+                </div>
+                <button class="btn-buy" id="rBuy">Купить за 665 ₽</button>
+                <div class="result-disclaimer">Цена ориентировочная. Финальная — на сайте сервиса.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SCENARIOS -->
+      <div class="section" id="scenarios">
+        <div class="section-eyebrow">Сценарии</div>
+        <div class="section-title">Куда вы едете?</div>
+        <div class="section-desc">Готовые подборки по типичным поездкам — без калькулятора.</div>
+
+        <div class="scenarios">
+          <div class="scenario-card">
+            <div class="sc-region">Турция, 7 дней, отдых</div>
+            <div class="sc-title">Турция, 7 дней, отдых</div>
+            <div class="sc-desc">Турция · 5 ГБ · 7 дней</div>
+            <div class="sc-price-row">
+              <div class="sc-price">от3 490₽ <small></small></div>
+              <a href="#calc" class="sc-link">Подобрать →</a>
+            </div>
+          </div>
+          <div class="scenario-card">
+            <div class="sc-region">Европа, месяц, 5 стран</div>
+            <div class="sc-title">Европа, месяц, 5 стран</div>
+            <div class="sc-desc">Европа · 20 ГБ · 30 дней</div>
+            <div class="sc-price-row">
+              <div class="sc-price">от1 890₽</div>
+              <a href="#calc" class="sc-link">Подобрать →</a>
+            </div>
+          </div>
+          <div class="scenario-card">
+            <div class="sc-region">Азия (Тай / Бали / Вьетнам), 14 дней</div>
+            <div class="sc-title">Азия (Тай / Бали / Вьетнам), 14 дней</div>
+            <div class="sc-desc">Азия · 10 ГБ · 14 дней</div>
+            <div class="sc-price-row">
+              <div class="sc-price">от1 290₽</div>
+              <a href="#calc" class="sc-link">Подобрать →</a>
+            </div>
+          </div>
+          <div class="scenario-card">
+            <div class="sc-region">Долгий релокейт, 3–6 мес</div>
+            <div class="sc-title">Долгий релокейт, 3–6 мес</div>
+            <div class="sc-desc">Глобал · 30 ГБ/мес + top-up</div>
+            <div class="sc-price-row">
+              <div class="sc-price">от2 490₽</div>
+              <a href="#calc" class="sc-link">Подобрать →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script>
+let currentPrice = 690;
+let currentDays = 7;
+let currentGbPerDay = 1;
+
+function selectCountry(btn) {
+  document.querySelectorAll('.country-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentPrice = parseInt(btn.dataset.price);
+  updateResult();
+}
+
+function selectProfile(btn, gbDay) {
+  document.querySelectorAll('.profile-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentGbPerDay = gbDay;
+  updateResult();
+}
+
+function updateDur(v) {
+  currentDays = parseInt(v);
+  document.getElementById('durVal').textContent = v;
+  updateResult();
+}
+
+function updateResult() {
+  const gb = Math.ceil(currentGbPerDay * currentDays);
+  const price = Math.round(currentPrice * (currentDays / 7) * (currentGbPerDay / 1));
+  const hasHotspot = document.getElementById('needHotspot').checked;
+  const perDay = Math.round(price / currentDays);
+  document.getElementById('rPlan').textContent = gb + ' ГБ · ' + currentDays + ' дн';
+  document.getElementById('rSub').textContent = 'Только интернет' + (hasHotspot ? ' + hotspot' : '') + ' · 1 страна';
+  document.getElementById('rPrice').textContent = price + ' ₽';
+  document.getElementById('rPer').textContent = '−' + perDay + ' ₽/день';
+  document.getElementById('rHs').textContent = hasHotspot ? 'да' : 'нет';
+  document.getElementById('rBuy').textContent = 'Купить за ' + price + ' ₽';
+}
+
+updateResult();
+</script>
+</body>
+</html>
