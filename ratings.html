@@ -4,48 +4,51 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Рейтинги Paybeam — виртуальные карты, eSIM, оплата сервисов</title>
-<meta name="description" content="Три ключевых рейтинга Paybeam в одном месте: лучшие виртуальные карты для оплаты за рубежом, надёжные eSIM для путешествий и проверенные сервисы оплаты ChatGPT, Spotify, Netflix и других зарубежных сервисов." />
+<meta name="description" content="Три ключевых рейтинга Paybeam: лучшие виртуальные карты, надёжные eSIM и проверенные сервисы оплаты ChatGPT, Spotify, Netflix из России." />
 
 <style>
   :root{
-    --bg:#ffffff;
-    --bg-soft:#f6f8fb;
-    --bg-soft-2:#eef2f7;
-    --text:#0f172a;
-    --text-soft:#475569;
-    --muted:#94a3b8;
-    --line:#e5e9f0;
-    --line-strong:#cbd5e1;
-    --accent:#2563eb;
-    --accent-2:#1d4ed8;
-    --accent-3:#7c3aed;
-    --accent-soft:#e8efff;
-    --green:#16a34a;
-    --green-soft:#e7f8ee;
-    --amber:#d97706;
-    --amber-soft:#fff4e2;
-    --rose:#e11d48;
-    --rose-soft:#ffe4e9;
-    --radius:16px;
-    --radius-sm:10px;
-    --radius-lg:24px;
-    --radius-xl:32px;
-    --shadow-sm:0 1px 2px rgba(15,23,42,.04), 0 1px 1px rgba(15,23,42,.03);
-    --shadow:0 8px 24px rgba(15,23,42,.06), 0 2px 6px rgba(15,23,42,.04);
-    --shadow-lg:0 20px 50px rgba(15,23,42,.08);
-    --shadow-xl:0 30px 80px rgba(15,23,42,.12);
-    --container:1180px;
-    --font:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",Roboto,"Helvetica Neue",Arial,sans-serif;
-    --ease:cubic-bezier(.22,.61,.36,1);
+    /* ── Paybeam dark theme (extracted from paybeam.ru CSS) ── */
+    --bg:          #020618;
+    --bg-1:        #0f172b;
+    --bg-2:        #1d293d;
+    --bg-3:        #314158;
+    --text:        #f8fafc;
+    --text-soft:   #94a3b8;
+    --muted:       #62748e;
+    --line:        #1d293d;
+    --line-2:      #314158;
+    --accent:      #00bb7f;
+    --accent-2:    #00d294;
+    --accent-dim:  rgba(0,187,127,.12);
+    --accent-glow: rgba(0,187,127,.25);
+    --purple:      #625fff;
+    --purple-dim:  rgba(98,95,255,.12);
+    --cyan:        #00a5ef;
+    --cyan-dim:    rgba(0,165,239,.12);
+    --amber:       #f99c00;
+    --amber-dim:   rgba(249,156,0,.12);
+    --red:         #fb2c36;
+    --red-dim:     rgba(251,44,54,.12);
+    --radius:      12px;
+    --radius-lg:   20px;
+    --radius-xl:   24px;
+    --radius-2xl:  32px;
+    --shadow:      0 8px 32px rgba(0,0,0,.4);
+    --shadow-lg:   0 20px 60px rgba(0,0,0,.5);
+    --shadow-xl:   0 30px 90px rgba(0,0,0,.6);
+    --container:   1180px;
+    --font:        ui-sans-serif,system-ui,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    --ease:        cubic-bezier(.22,.61,.36,1);
   }
+
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
   body{
     font-family:var(--font);
     background:var(--bg);
     color:var(--text);
-    font-size:16px;
-    line-height:1.55;
+    font-size:16px;line-height:1.55;
     -webkit-font-smoothing:antialiased;
     text-rendering:optimizeLegibility;
     overflow-x:hidden;
@@ -55,157 +58,200 @@
   img{max-width:100%;display:block}
   button{font-family:inherit}
   .container{max-width:var(--container);margin:0 auto;padding:0 24px}
-  h1,h2,h3,h4{margin:0 0 12px;line-height:1.2;letter-spacing:-.01em}
+  h1,h2,h3,h4{margin:0 0 12px;line-height:1.2;letter-spacing:-.01em;color:var(--text)}
   h1{font-size:56px;font-weight:800;letter-spacing:-.03em}
   h2{font-size:36px;font-weight:700;letter-spacing:-.02em}
   h3{font-size:22px;font-weight:700}
   p{margin:0 0 12px;color:var(--text-soft)}
 
-  /* ============ NAV ============ */
+  /* ── NAV ── */
   .nav{
     position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,.85);
-    backdrop-filter:saturate(180%) blur(14px);
+    background:rgba(2,6,24,.8);
+    backdrop-filter:saturate(180%) blur(20px);
     border-bottom:1px solid var(--line);
   }
   .nav-row{display:flex;align-items:center;gap:24px;height:64px}
   .logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text);font-size:17px}
   .logo-mark{
     width:30px;height:30px;border-radius:9px;
-    background:linear-gradient(135deg,var(--accent),var(--accent-3));
-    display:grid;place-items:center;color:#fff;font-size:14px;font-weight:800;
-    box-shadow:0 4px 12px rgba(37,99,235,.35);
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;color:#020618;font-size:13px;font-weight:900;
+    box-shadow:0 4px 16px var(--accent-glow);
     position:relative;overflow:hidden;
   }
   .logo-mark::after{
     content:"";position:absolute;inset:0;
-    background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.35) 50%,transparent 70%);
+    background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.4) 50%,transparent 70%);
     transform:translateX(-100%);
     animation:shine 4s ease-in-out infinite;
   }
   @keyframes shine{40%,100%{transform:translateX(100%)}}
+
   .nav-links{display:flex;gap:22px;margin-left:24px}
   .nav-links a{color:var(--text-soft);font-weight:500;font-size:14px;transition:color .15s}
   .nav-links a:hover{color:var(--text)}
   .nav-cta{margin-left:auto;display:flex;gap:8px;align-items:center}
+
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    padding:11px 18px;border-radius:12px;font-weight:600;font-size:14px;
+    padding:11px 18px;border-radius:var(--radius);font-weight:600;font-size:14px;
     border:1px solid transparent;cursor:pointer;
-    transition:transform .15s var(--ease),background .2s ease,color .15s ease,border-color .15s ease,box-shadow .2s ease;
+    transition:transform .15s var(--ease),background .2s,color .15s,border-color .15s,box-shadow .2s;
     white-space:nowrap;
   }
-  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 6px 16px rgba(37,99,235,.3)}
-  .btn-primary:hover{background:var(--accent-2);color:#fff;transform:translateY(-1px);box-shadow:0 10px 22px rgba(37,99,235,.4)}
+  .btn-primary{
+    background:var(--accent);color:#020618;
+    box-shadow:0 6px 20px var(--accent-glow);
+  }
+  .btn-primary:hover{
+    background:var(--accent-2);color:#020618;
+    transform:translateY(-1px);box-shadow:0 10px 28px rgba(0,210,148,.4);
+  }
   .btn-primary:active{transform:translateY(0)}
-  .btn-ghost{background:#fff;color:var(--text);border-color:var(--line)}
-  .btn-ghost:hover{background:var(--bg-soft);color:var(--text);border-color:var(--line-strong)}
-  .btn-lg{padding:14px 22px;font-size:15px;border-radius:14px}
+  .btn-ghost{
+    background:transparent;color:var(--text-soft);
+    border-color:var(--line-2);
+  }
+  .btn-ghost:hover{background:var(--bg-2);color:var(--text);border-color:var(--bg-3)}
+  .btn-lg{padding:14px 22px;font-size:15px;border-radius:var(--radius-lg)}
 
-  /* ============ HERO ============ */
+  /* ── HERO ── */
   .hero{
-    position:relative;padding:80px 0 60px;text-align:center;
-    overflow:hidden;
+    position:relative;padding:90px 0 70px;text-align:center;overflow:hidden;
   }
-  .hero::before{
-    content:"";position:absolute;inset:-100px 0 0 0;z-index:-1;
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
     background:
-      radial-gradient(600px 300px at 20% 10%,rgba(37,99,235,.12),transparent 60%),
-      radial-gradient(500px 250px at 80% 20%,rgba(124,58,237,.10),transparent 60%);
-    pointer-events:none;
+      radial-gradient(800px 500px at 50% -10%, rgba(0,187,127,.18), transparent 60%),
+      radial-gradient(600px 400px at 20% 60%, rgba(0,165,239,.08), transparent 55%),
+      radial-gradient(600px 400px at 80% 70%, rgba(98,95,255,.08), transparent 55%);
   }
+  .hero-grid{
+    position:absolute;inset:0;z-index:0;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size:60px 60px;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent);
+  }
+  .hero > *{position:relative;z-index:1}
+
   .hero-badge{
     display:inline-flex;align-items:center;gap:8px;
-    background:#fff;border:1px solid var(--line);
+    background:var(--accent-dim);border:1px solid rgba(0,187,127,.3);
     padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;
-    color:var(--text-soft);margin-bottom:24px;box-shadow:var(--shadow-sm);
+    color:var(--accent);margin-bottom:24px;
   }
   .hero-badge .pulse{
-    width:8px;height:8px;border-radius:50%;background:var(--green);
-    box-shadow:0 0 0 0 rgba(22,163,74,.6);animation:pulse 1.8s infinite;
+    width:7px;height:7px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 0 var(--accent-glow);animation:pulse 1.8s infinite;
   }
   @keyframes pulse{
-    0%{box-shadow:0 0 0 0 rgba(22,163,74,.6)}
-    70%{box-shadow:0 0 0 10px rgba(22,163,74,0)}
-    100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}
+    0%{box-shadow:0 0 0 0 rgba(0,187,127,.6)}
+    70%{box-shadow:0 0 0 10px rgba(0,187,127,0)}
+    100%{box-shadow:0 0 0 0 rgba(0,187,127,0)}
   }
   .hero h1{max-width:820px;margin:0 auto 18px}
   .hero h1 .grad{
-    background:linear-gradient(120deg,var(--accent),var(--accent-3));
+    background:linear-gradient(120deg, var(--accent), var(--accent-2), #38bdf8);
     -webkit-background-clip:text;background-clip:text;color:transparent;
   }
-  .hero-sub{max-width:640px;margin:0 auto 32px;font-size:18px;color:var(--text-soft)}
-  .hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:48px}
+  .hero-sub{
+    max-width:600px;margin:0 auto 36px;
+    font-size:18px;color:var(--text-soft);
+  }
+  .hero-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:56px}
   .hero-stats{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
-    max-width:880px;margin:0 auto;
+    display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+    max-width:860px;margin:0 auto;
   }
   .hero-stat{
-    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-    padding:18px;text-align:left;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .2s;
+    background:var(--bg-1);border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:18px 20px;text-align:left;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .2s;
   }
-  .hero-stat:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--accent-soft)}
+  .hero-stat:hover{
+    transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.4);
+    border-color:rgba(0,187,127,.3);
+  }
   .hero-stat .num{font-size:26px;font-weight:800;letter-spacing:-.02em;color:var(--text)}
   .hero-stat .num span{font-size:18px;color:var(--accent)}
   .hero-stat .lbl{font-size:13px;color:var(--text-soft);margin-top:2px}
 
-  /* ============ RATING CARDS ============ */
-  .ratings{padding:40px 0 24px}
-  .ratings-head{text-align:center;margin-bottom:48px}
-  .eyebrow{display:inline-block;color:var(--accent);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
-  .ratings-head h2{max-width:680px;margin:0 auto 12px}
-  .ratings-head p{max-width:560px;margin:0 auto;font-size:16px}
+  /* ── RATING CARDS ── */
+  .ratings{padding:40px 0 32px}
+  .ratings-head{text-align:center;margin-bottom:52px}
+  .eyebrow{
+    display:inline-block;color:var(--accent);font-weight:700;
+    font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin-bottom:10px;
+  }
+  .ratings-head h2{max-width:640px;margin:0 auto 12px}
+  .ratings-head p{max-width:520px;margin:0 auto;font-size:16px}
 
-  .rating-grid{display:flex;flex-direction:column;gap:28px}
+  .rating-grid{display:flex;flex-direction:column;gap:24px}
 
   .rcard{
     position:relative;border-radius:var(--radius-xl);
-    background:#fff;border:1px solid var(--line);
+    background:var(--bg-1);border:1px solid var(--line);
     overflow:hidden;
-    display:grid;grid-template-columns:1.05fr 1fr;
-    transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .25s;
+    display:grid;grid-template-columns:1.1fr 1fr;
+    transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .3s;
     isolation:isolate;
+    text-decoration:none;
   }
   .rcard::before{
-    content:"";position:absolute;inset:0;z-index:-1;opacity:0;
-    transition:opacity .4s ease;
+    content:"";position:absolute;inset:0;z-index:0;opacity:0;
+    transition:opacity .4s ease;border-radius:var(--radius-xl);
   }
-  .rcard:hover{transform:translateY(-4px);box-shadow:var(--shadow-xl);border-color:transparent}
+  .rcard:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-xl);
+    border-color:transparent;
+  }
   .rcard:hover::before{opacity:1}
 
-  .rcard-body{padding:48px 44px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+  .rcard-body{
+    padding:48px 44px;display:flex;flex-direction:column;justify-content:center;
+    position:relative;z-index:2;
+  }
   .rcard-num{
-    position:absolute;top:24px;right:28px;font-size:120px;font-weight:900;
-    color:var(--bg-soft);letter-spacing:-.05em;line-height:1;user-select:none;pointer-events:none;
-    transition:color .3s ease,transform .4s var(--ease);
+    position:absolute;top:18px;right:22px;
+    font-size:120px;font-weight:900;
+    color:rgba(255,255,255,.03);letter-spacing:-.05em;line-height:1;
+    user-select:none;pointer-events:none;
+    transition:transform .5s var(--ease),color .4s;
   }
-  .rcard:hover .rcard-num{transform:scale(1.08) rotate(-3deg)}
-
+  .rcard:hover .rcard-num{
+    transform:scale(1.08) rotate(-3deg);
+    color:rgba(255,255,255,.055);
+  }
   .rcard-eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--accent-soft);color:var(--accent-2);
-    padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;
-    text-transform:uppercase;letter-spacing:.06em;width:fit-content;margin-bottom:16px;
+    display:inline-flex;align-items:center;gap:7px;
+    border:1px solid;border-radius:999px;
+    padding:5px 12px;font-size:11px;font-weight:700;
+    text-transform:uppercase;letter-spacing:.07em;width:fit-content;margin-bottom:16px;
   }
-  .rcard h3{font-size:30px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
-  .rcard-desc{font-size:16px;margin-bottom:20px;max-width:440px}
+  .rcard h3{font-size:28px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px;color:var(--text)}
+  .rcard-desc{font-size:15px;margin-bottom:20px;max-width:420px;color:var(--text-soft)}
 
   .rcard-feats{display:flex;flex-direction:column;gap:8px;margin-bottom:24px}
   .rcard-feat{
     display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-soft);
   }
   .rcard-feat .ico{
-    width:22px;height:22px;border-radius:50%;background:var(--green-soft);color:var(--green);
-    display:grid;place-items:center;flex-shrink:0;font-size:12px;font-weight:800;
+    width:20px;height:20px;border-radius:50%;
+    display:grid;place-items:center;flex-shrink:0;font-size:10px;font-weight:900;
   }
 
   .rcard-top{
-    display:flex;align-items:center;gap:10px;margin-bottom:24px;
-    padding:14px 16px;background:var(--bg-soft);border-radius:14px;border:1px solid var(--line);
+    display:flex;align-items:center;gap:12px;margin-bottom:24px;
+    padding:14px 16px;background:var(--bg-2);border-radius:14px;
+    border:1px solid var(--line-2);
   }
-  .rcard-top .label{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
-  .rcard-top .winner{font-size:15px;font-weight:700;color:var(--text)}
-  .rcard-top .stars{color:#f59e0b;letter-spacing:1px;font-size:13px;margin-left:auto}
+  .rcard-top .label{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.09em}
+  .rcard-top .winner{font-size:14px;font-weight:700;color:var(--text);margin-top:2px}
+  .rcard-top .stars{color:#f99c00;letter-spacing:1px;font-size:12px;margin-left:auto}
 
   .rcard-cta{display:flex;gap:10px;flex-wrap:wrap}
 
@@ -213,92 +259,98 @@
     position:relative;overflow:hidden;
     display:grid;place-items:center;min-height:360px;
     perspective:1200px;
+    z-index:1;
   }
 
-  /* === Card 1: VIRTUAL CARDS === */
-  .rcard.c1 .rcard-visual{background:linear-gradient(135deg,#eff5ff 0%,#e0eaff 100%)}
-  .rcard.c1::before{background:linear-gradient(135deg,#f5f9ff 0%,#fff 50%,#f7f3ff 100%)}
-  .rcard.c1 .rcard-eyebrow{background:#e8efff;color:#1d4ed8}
-  .rcard.c1 .rcard-num{color:#eef4ff}
-  .rcard.c1:hover .rcard-num{color:#e3ecff}
+  /* ── CARD 1: VIRTUAL CARDS (emerald) ── */
+  .rcard.c1{background:var(--bg-1)}
+  .rcard.c1::before{
+    background:linear-gradient(135deg,#072826eb,#071224f5);
+  }
+  .rcard.c1:hover{border-color:rgba(0,187,127,.3)}
+  .rcard.c1 .rcard-visual{background:linear-gradient(135deg,#002c22 0%,#020618 100%)}
+  .rcard.c1 .rcard-eyebrow{background:var(--accent-dim);color:var(--accent);border-color:rgba(0,187,127,.25)}
+  .rcard.c1 .rcard-feat .ico{background:var(--accent-dim);color:var(--accent)}
 
+  /* Bank card stack */
   .vc-stack{
-    position:relative;width:300px;height:190px;
+    position:relative;width:290px;height:185px;
     transform-style:preserve-3d;
     transition:transform .6s var(--ease);
   }
-  .rcard.c1:hover .vc-stack{transform:rotateY(-12deg) rotateX(8deg)}
+  .rcard.c1:hover .vc-stack{transform:rotateY(-14deg) rotateX(8deg)}
   .vc{
-    position:absolute;inset:0;border-radius:18px;
-    box-shadow:0 18px 40px rgba(15,23,42,.18),0 4px 10px rgba(15,23,42,.08);
-    overflow:hidden;color:#fff;
+    position:absolute;inset:0;border-radius:18px;color:#fff;
     transition:transform .6s var(--ease),box-shadow .5s var(--ease);
-  }
-  .vc-1{
-    background:
-      radial-gradient(circle at 80% 20%,rgba(255,255,255,.25),transparent 50%),
-      linear-gradient(135deg,#1e293b 0%,#0f172a 100%);
-    transform:translateZ(40px);
-  }
-  .vc-2{
-    background:
-      radial-gradient(circle at 30% 70%,rgba(255,255,255,.2),transparent 50%),
-      linear-gradient(135deg,#2563eb 0%,#1d4ed8 70%,#1e3a8a 100%);
-    transform:translate(-30px,30px) translateZ(0px);
+    box-shadow:0 20px 50px rgba(0,0,0,.5),0 4px 12px rgba(0,0,0,.3);
+    overflow:hidden;
   }
   .vc-3{
-    background:
-      radial-gradient(circle at 70% 50%,rgba(255,255,255,.2),transparent 50%),
-      linear-gradient(135deg,#7c3aed 0%,#5b21b6 100%);
-    transform:translate(-60px,60px) translateZ(-40px);
+    background:linear-gradient(135deg,#1d293d 0%,#0f172b 100%);
+    transform:translate(-55px,52px) translateZ(-40px) rotate(-4deg);
+    border:1px solid rgba(255,255,255,.06);
   }
-  .rcard.c1:hover .vc-1{transform:translate(20px,-20px) translateZ(60px)}
-  .rcard.c1:hover .vc-2{transform:translate(-30px,30px) translateZ(10px) rotate(-2deg)}
-  .rcard.c1:hover .vc-3{transform:translate(-80px,80px) translateZ(-30px) rotate(-4deg)}
+  .vc-2{
+    background:linear-gradient(135deg,#004e3b 0%,#002c22 100%);
+    transform:translate(-28px,26px) translateZ(0px) rotate(-2deg);
+    border:1px solid rgba(0,187,127,.2);
+  }
+  .vc-1{
+    background:linear-gradient(135deg,#005f46 0%,#007956 40%,#00bb7f 100%);
+    transform:translateZ(40px);
+    border:1px solid rgba(0,212,148,.3);
+  }
+  .vc-shine{
+    position:absolute;inset:0;border-radius:18px;
+    background:linear-gradient(120deg,transparent 20%,rgba(255,255,255,.07) 50%,transparent 80%);
+    transition:background .4s ease;
+  }
+  .rcard.c1:hover .vc-1{transform:translate(18px,-16px) translateZ(60px)}
+  .rcard.c1:hover .vc-2{transform:translate(-28px,26px) translateZ(12px) rotate(-2deg)}
+  .rcard.c1:hover .vc-3{transform:translate(-72px,68px) translateZ(-30px) rotate(-5deg)}
 
   .vc-chip{
-    position:absolute;top:24px;left:24px;width:32px;height:24px;border-radius:5px;
+    position:absolute;top:22px;left:22px;width:32px;height:24px;border-radius:5px;
     background:linear-gradient(135deg,#fcd34d,#d97706);
-    box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);
+    border:1px solid rgba(0,0,0,.2);
   }
-  .vc-chip::before,.vc-chip::after{
-    content:"";position:absolute;background:rgba(0,0,0,.15);
-  }
-  .vc-chip::before{top:6px;left:0;right:0;height:1px}
-  .vc-chip::after{left:14px;top:0;bottom:0;width:1px}
-  .vc-wave{
-    position:absolute;top:26px;left:62px;width:18px;height:18px;border-radius:50%;
-    border:1.5px solid rgba(255,255,255,.7);
+  .vc-chip::before{content:"";position:absolute;top:7px;left:0;right:0;height:1px;background:rgba(0,0,0,.2)}
+  .vc-chip::after{content:"";position:absolute;left:14px;top:0;bottom:0;width:1px;background:rgba(0,0,0,.2)}
+  .vc-nfc{
+    position:absolute;top:25px;left:60px;width:16px;height:16px;border-radius:50%;
+    border:1.5px solid rgba(255,255,255,.6);
     border-left-color:transparent;border-bottom-color:transparent;
     transform:rotate(-45deg);
   }
-  .vc-wave::after{
+  .vc-nfc::after{
     content:"";position:absolute;inset:3px;border-radius:50%;
-    border:1.5px solid rgba(255,255,255,.5);
+    border:1.5px solid rgba(255,255,255,.4);
     border-left-color:transparent;border-bottom-color:transparent;
   }
   .vc-num{
-    position:absolute;left:24px;bottom:48px;font-family:"SF Mono",ui-monospace,monospace;
-    font-size:14px;letter-spacing:.12em;font-weight:600;
+    position:absolute;left:22px;bottom:44px;
+    font-family:ui-monospace,monospace;font-size:13px;letter-spacing:.14em;
+    font-weight:600;color:rgba(255,255,255,.9);
   }
-  .vc-name{position:absolute;left:24px;bottom:24px;font-size:11px;text-transform:uppercase;letter-spacing:.1em;opacity:.85}
+  .vc-name{position:absolute;left:22px;bottom:22px;font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.7)}
   .vc-brand{
-    position:absolute;right:20px;bottom:20px;font-size:14px;font-weight:800;letter-spacing:.05em;
-    font-style:italic;
+    position:absolute;right:18px;bottom:18px;font-size:13px;font-weight:900;
+    letter-spacing:.05em;font-style:italic;color:rgba(255,255,255,.95);
   }
 
   .vc-flags{
-    position:absolute;display:flex;gap:6px;opacity:0;
-    transition:opacity .4s ease .1s,transform .5s var(--ease) .1s;
-    transform:translateY(8px);
+    position:absolute;display:flex;gap:6px;
+    opacity:0;transition:opacity .4s ease .15s,transform .5s var(--ease) .15s;
+    transform:translateY(10px);
   }
   .rcard.c1:hover .vc-flags{opacity:1;transform:translateY(0)}
-  .vc-flags.top{top:30px;right:30px}
-  .vc-flags.bot{bottom:30px;left:30px}
+  .vc-flags.top{top:24px;right:24px}
+  .vc-flags.bot{bottom:24px;left:24px}
   .vc-flag{
-    width:28px;height:20px;border-radius:4px;
-    box-shadow:0 4px 12px rgba(15,23,42,.18);
-    background:#fff;display:grid;place-items:center;font-size:14px;
+    width:30px;height:22px;border-radius:5px;
+    background:var(--bg-2);border:1px solid var(--line-2);
+    display:grid;place-items:center;font-size:15px;
+    box-shadow:0 4px 14px rgba(0,0,0,.4);
     animation:floatY 3s ease-in-out infinite;
   }
   .vc-flag:nth-child(2){animation-delay:.4s}
@@ -308,141 +360,119 @@
     50%{transform:translateY(-6px)}
   }
 
-  /* === Card 2: ESIM === */
-  .rcard.c2 .rcard-visual{background:linear-gradient(135deg,#ecfdf5 0%,#dbeafe 100%)}
-  .rcard.c2::before{background:linear-gradient(135deg,#f0fdf4 0%,#fff 50%,#eff6ff 100%)}
-  .rcard.c2 .rcard-eyebrow{background:#dcfce7;color:#15803d}
-  .rcard.c2 .rcard-num{color:#ecfdf5}
-  .rcard.c2:hover .rcard-num{color:#dcfce7}
+  /* ── CARD 2: ESIM (cyan/blue) ── */
+  .rcard.c2{background:var(--bg-1)}
+  .rcard.c2::before{background:linear-gradient(135deg,#060e1deb,#071f1bc2)}
+  .rcard.c2:hover{border-color:rgba(0,165,239,.3)}
+  .rcard.c2 .rcard-visual{background:linear-gradient(135deg,#0069a4 0%,#020618 70%)}
+  .rcard.c2 .rcard-visual::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(135deg,#003452,#020618);
+    opacity:.85;
+  }
+  .rcard.c2 .rcard-eyebrow{background:var(--cyan-dim);color:var(--cyan);border-color:rgba(0,165,239,.25)}
+  .rcard.c2 .rcard-feat .ico{background:var(--cyan-dim);color:var(--cyan)}
 
-  .esim-wrap{
-    position:relative;width:320px;height:320px;
-    display:grid;place-items:center;
-  }
+  .esim-wrap{position:relative;width:300px;height:300px;display:grid;place-items:center;z-index:1}
   .esim-orbit{
-    position:absolute;inset:0;border-radius:50%;border:1.5px dashed rgba(37,99,235,.25);
-    animation:spin 30s linear infinite;
-    transition:transform .6s var(--ease);
+    position:absolute;inset:0;border-radius:50%;
+    border:1px dashed rgba(0,165,239,.2);
+    animation:spin 28s linear infinite;
   }
-  .esim-orbit.o2{inset:30px;border-color:rgba(124,58,237,.2);animation-duration:22s;animation-direction:reverse}
-  .esim-orbit.o3{inset:60px;border-color:rgba(22,163,74,.2);animation-duration:18s}
+  .esim-orbit.o2{inset:28px;border-color:rgba(0,187,127,.15);animation-duration:20s;animation-direction:reverse}
+  .esim-orbit.o3{inset:56px;border-color:rgba(98,95,255,.15);animation-duration:15s}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .rcard.c2:hover .esim-orbit{animation-duration:8s}
-  .rcard.c2:hover .esim-orbit.o2{animation-duration:6s}
-  .rcard.c2:hover .esim-orbit.o3{animation-duration:5s}
+  .rcard.c2:hover .esim-orbit{animation-duration:7s}
+  .rcard.c2:hover .esim-orbit.o2{animation-duration:5s}
+  .rcard.c2:hover .esim-orbit.o3{animation-duration:4s}
 
   .orb-flag{
-    position:absolute;width:36px;height:36px;border-radius:50%;
-    background:#fff;display:grid;place-items:center;font-size:20px;
-    box-shadow:0 6px 18px rgba(15,23,42,.15);
-    border:1px solid var(--line);
-    transition:transform .3s ease;
+    position:absolute;width:34px;height:34px;border-radius:50%;
+    background:var(--bg-2);border:1px solid var(--line-2);
+    display:grid;place-items:center;font-size:18px;
+    box-shadow:0 6px 20px rgba(0,0,0,.5);
+    animation:spin-rev 28s linear infinite;
   }
-  .orb-flag:hover{transform:scale(1.15);z-index:5}
-  /* on outer orbit */
-  .esim-orbit.o1 .orb-flag:nth-child(1){top:-18px;left:50%;margin-left:-18px}
-  .esim-orbit.o1 .orb-flag:nth-child(2){top:50%;right:-18px;margin-top:-18px}
-  .esim-orbit.o1 .orb-flag:nth-child(3){bottom:-18px;left:50%;margin-left:-18px}
-  .esim-orbit.o1 .orb-flag:nth-child(4){top:50%;left:-18px;margin-top:-18px}
-  /* mid orbit */
-  .esim-orbit.o2 .orb-flag:nth-child(1){top:8%;right:8%}
-  .esim-orbit.o2 .orb-flag:nth-child(2){bottom:8%;left:8%}
-  /* counter-spin flags so they stay upright (children get same rotation as parent rotates; offset is animation) */
-  .orb-flag{animation:spin-rev 30s linear infinite}
-  .esim-orbit.o2 .orb-flag{animation:spin-fwd 22s linear infinite}
-  .esim-orbit.o3 .orb-flag{animation:spin-rev 18s linear infinite}
+  .esim-orbit.o2 .orb-flag{animation:spin-fwd 20s linear infinite}
+  .esim-orbit.o3 .orb-flag{animation:spin-rev 15s linear infinite}
   @keyframes spin-rev{to{transform:rotate(-360deg)}}
   @keyframes spin-fwd{to{transform:rotate(360deg)}}
-  .rcard.c2:hover .esim-orbit.o1 .orb-flag{animation-duration:8s}
-  .rcard.c2:hover .esim-orbit.o2 .orb-flag{animation-duration:6s}
-  .rcard.c2:hover .esim-orbit.o3 .orb-flag{animation-duration:5s}
+  .rcard.c2:hover .esim-orbit.o1 .orb-flag{animation-duration:7s}
+  .rcard.c2:hover .esim-orbit.o2 .orb-flag{animation-duration:5s}
+
+  .esim-orbit.o1 .orb-flag:nth-child(1){top:-17px;left:50%;margin-left:-17px}
+  .esim-orbit.o1 .orb-flag:nth-child(2){top:50%;right:-17px;margin-top:-17px}
+  .esim-orbit.o1 .orb-flag:nth-child(3){bottom:-17px;left:50%;margin-left:-17px}
+  .esim-orbit.o1 .orb-flag:nth-child(4){top:50%;left:-17px;margin-top:-17px}
+  .esim-orbit.o2 .orb-flag:nth-child(1){top:6%;right:6%}
+  .esim-orbit.o2 .orb-flag:nth-child(2){bottom:6%;left:6%}
 
   .esim-chip{
-    position:relative;width:140px;height:140px;border-radius:24px;
-    background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);
+    position:relative;width:130px;height:130px;border-radius:22px;
+    background:linear-gradient(135deg,#1d293d 0%,#0f172b 100%);
+    border:1px solid rgba(0,165,239,.2);
     box-shadow:
-      0 20px 40px rgba(15,23,42,.25),
-      inset 0 2px 0 rgba(255,255,255,.1),
-      inset 0 -2px 0 rgba(0,0,0,.3);
+      0 20px 40px rgba(0,0,0,.5),
+      0 0 40px rgba(0,165,239,.15),
+      inset 0 1px 0 rgba(255,255,255,.06);
     display:grid;place-items:center;
     transition:transform .5s var(--ease),box-shadow .5s var(--ease);
     z-index:3;
   }
   .rcard.c2:hover .esim-chip{
-    transform:scale(1.08) rotate(-5deg);
+    transform:scale(1.1) rotate(-5deg);
     box-shadow:
-      0 30px 60px rgba(37,99,235,.35),
-      inset 0 2px 0 rgba(255,255,255,.15),
-      inset 0 -2px 0 rgba(0,0,0,.4);
+      0 30px 60px rgba(0,0,0,.5),
+      0 0 60px rgba(0,165,239,.3),
+      inset 0 1px 0 rgba(255,255,255,.1);
   }
-  .esim-chip::before{
-    content:"";position:absolute;inset:14px;border-radius:12px;
-    background:linear-gradient(135deg,#fcd34d 0%,#d97706 100%);
-    box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);
-  }
-  .esim-chip::after{
-    content:"eSIM";position:absolute;font-size:18px;font-weight:800;
-    color:#1e293b;letter-spacing:.05em;z-index:2;
-    text-shadow:0 1px 0 rgba(255,255,255,.3);
-  }
-  .esim-lines{
+  .esim-chip-inner{
     position:absolute;inset:14px;border-radius:12px;
+    background:linear-gradient(135deg,#fcd34d 0%,#d97706 100%);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .esim-chip-inner::before{
+    content:"";position:absolute;inset:0;border-radius:12px;
     background-image:
       linear-gradient(rgba(0,0,0,.15) 1px,transparent 1px),
       linear-gradient(90deg,rgba(0,0,0,.15) 1px,transparent 1px);
-    background-size:14px 14px;
-    background-position:center;
-    pointer-events:none;z-index:1;
+    background-size:10px 10px;
   }
-
+  .esim-label{
+    position:relative;z-index:2;font-size:14px;font-weight:900;
+    color:#020618;letter-spacing:.06em;
+  }
   .esim-signal{
     position:absolute;inset:0;border-radius:50%;
-    border:2px solid rgba(37,99,235,.3);
-    opacity:0;
-    animation:signal 2.5s ease-out infinite;
+    border:1.5px solid rgba(0,165,239,.35);
+    opacity:0;animation:signal 2.8s ease-out infinite;
   }
-  .esim-signal:nth-child(2){animation-delay:.8s}
-  .esim-signal:nth-child(3){animation-delay:1.6s}
+  .esim-signal:nth-child(2){animation-delay:.9s}
+  .esim-signal:nth-child(3){animation-delay:1.8s}
   @keyframes signal{
-    0%{transform:scale(.4);opacity:0}
-    20%{opacity:.6}
-    100%{transform:scale(1.3);opacity:0}
+    0%{transform:scale(.35);opacity:0}
+    15%{opacity:.7}
+    100%{transform:scale(1.25);opacity:0}
   }
 
-  /* === Card 3: SERVICES / AI === */
-  .rcard.c3 .rcard-visual{background:linear-gradient(135deg,#fdf4ff 0%,#fce7f3 100%)}
-  .rcard.c3::before{background:linear-gradient(135deg,#fef7ff 0%,#fff 50%,#fdf2f8 100%)}
-  .rcard.c3 .rcard-eyebrow{background:#fae8ff;color:#86198f}
-  .rcard.c3 .rcard-num{color:#fdf4ff}
-  .rcard.c3:hover .rcard-num{color:#fae8ff}
+  /* ── CARD 3: SERVICES / AI (purple) ── */
+  .rcard.c3{background:var(--bg-1)}
+  .rcard.c3::before{background:linear-gradient(135deg,#050c1bf0,#04191dc2)}
+  .rcard.c3:hover{border-color:rgba(98,95,255,.3)}
+  .rcard.c3 .rcard-visual{background:linear-gradient(135deg,#1a103a 0%,#020618 100%)}
+  .rcard.c3 .rcard-eyebrow{background:var(--purple-dim);color:var(--purple);border-color:rgba(98,95,255,.25)}
+  .rcard.c3 .rcard-feat .ico{background:var(--purple-dim);color:var(--purple)}
 
   .ai-wrap{position:relative;width:300px;height:300px;display:grid;place-items:center}
-  .ai-star{
-    position:relative;width:120px;height:120px;
-    display:grid;place-items:center;
-    transition:transform .6s var(--ease);
-  }
-  .rcard.c3:hover .ai-star{transform:rotate(180deg) scale(1.1)}
-  .ai-star svg{width:100%;height:100%;filter:drop-shadow(0 14px 28px rgba(124,58,237,.4))}
-  .ai-star::after{
-    content:"";position:absolute;inset:-30px;border-radius:50%;
-    background:radial-gradient(circle,rgba(124,58,237,.25),transparent 65%);
-    z-index:-1;
-    animation:glow 3s ease-in-out infinite;
-  }
-  @keyframes glow{
-    0%,100%{transform:scale(.9);opacity:.7}
-    50%{transform:scale(1.1);opacity:1}
-  }
 
   .ai-ray{
-    position:absolute;left:50%;top:50%;width:2px;height:140px;
-    background:linear-gradient(180deg,transparent,rgba(124,58,237,.6),transparent);
+    position:absolute;left:50%;top:50%;width:1.5px;
+    background:linear-gradient(180deg,transparent,rgba(98,95,255,.7),transparent);
     transform-origin:50% 0;
-    opacity:.5;
-    transition:opacity .4s ease,height .5s var(--ease);
+    transition:height .5s var(--ease),opacity .4s;
+    height:130px;opacity:.4;
   }
-  .rcard.c3:hover .ai-ray{opacity:1;height:170px}
+  .rcard.c3:hover .ai-ray{opacity:.9;height:160px}
   .ai-ray:nth-child(1){transform:translate(-50%,0) rotate(0deg)}
   .ai-ray:nth-child(2){transform:translate(-50%,0) rotate(60deg)}
   .ai-ray:nth-child(3){transform:translate(-50%,0) rotate(120deg)}
@@ -451,195 +481,230 @@
   .ai-ray:nth-child(6){transform:translate(-50%,0) rotate(300deg)}
 
   .ai-svc{
-    position:absolute;width:48px;height:48px;border-radius:14px;
-    background:#fff;display:grid;place-items:center;
-    box-shadow:0 8px 20px rgba(15,23,42,.12);
-    border:1px solid var(--line);
-    font-weight:800;font-size:14px;color:var(--text);
-    transition:transform .5s var(--ease),box-shadow .4s ease;
+    position:absolute;width:46px;height:46px;border-radius:14px;
+    background:var(--bg-2);border:1px solid var(--line-2);
+    display:grid;place-items:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.4);
+    font-weight:800;font-size:13px;color:var(--text);
+    transition:transform .5s var(--ease),box-shadow .4s,border-color .3s;
     animation:floatY 4s ease-in-out infinite;
   }
-  .ai-svc:hover{transform:translateY(-6px) scale(1.1);z-index:5;box-shadow:0 14px 30px rgba(15,23,42,.18)}
-  .ai-svc.s1{top:8%;left:6%;animation-delay:0s;background:linear-gradient(135deg,#10a37f,#0d8a6b);color:#fff}
-  .ai-svc.s2{top:8%;right:6%;animation-delay:.6s;background:linear-gradient(135deg,#1db954,#159c44);color:#fff}
-  .ai-svc.s3{bottom:8%;left:6%;animation-delay:1.2s;background:linear-gradient(135deg,#e50914,#b00610);color:#fff}
-  .ai-svc.s4{bottom:8%;right:6%;animation-delay:1.8s;background:linear-gradient(135deg,#000,#1a1a1a);color:#fff}
-  .ai-svc.s5{top:50%;left:-4%;margin-top:-24px;animation-delay:.3s;background:linear-gradient(135deg,#1877f2,#0d5fcb);color:#fff}
-  .ai-svc.s6{top:50%;right:-4%;margin-top:-24px;animation-delay:.9s;background:linear-gradient(135deg,#171a21,#2a475e);color:#fff}
-
+  .ai-svc:hover{transform:translateY(-6px) scale(1.12)!important;z-index:5}
+  .ai-svc.s1{top:6%;left:4%;animation-delay:0s;background:linear-gradient(135deg,#10a37f,#0d8a6b);color:#fff;border-color:rgba(16,163,127,.4)}
+  .ai-svc.s2{top:6%;right:4%;animation-delay:.6s;background:linear-gradient(135deg,#1db954,#159c44);color:#fff;border-color:rgba(29,185,84,.4)}
+  .ai-svc.s3{bottom:6%;left:4%;animation-delay:1.2s;background:linear-gradient(135deg,#e50914,#b00610);color:#fff;border-color:rgba(229,9,20,.4)}
+  .ai-svc.s4{bottom:6%;right:4%;animation-delay:1.8s;background:linear-gradient(135deg,#1e1e1e,#111);color:#fff;border-color:rgba(255,255,255,.1)}
+  .ai-svc.s5{top:50%;left:-2%;margin-top:-23px;animation-delay:.3s;background:linear-gradient(135deg,#1877f2,#0d5fcb);color:#fff;border-color:rgba(24,119,242,.4)}
+  .ai-svc.s6{top:50%;right:-2%;margin-top:-23px;animation-delay:.9s;background:linear-gradient(135deg,#171a21,#2a475e);color:#fff;border-color:rgba(255,255,255,.08)}
   .rcard.c3:hover .ai-svc{animation-duration:2s}
 
-  /* counter-rotate to keep star icon stable visually when card rotates */
-  .ai-star-inner{transition:transform .6s var(--ease)}
+  .ai-star{
+    position:relative;width:110px;height:110px;
+    display:grid;place-items:center;
+    transition:transform .7s var(--ease);
+    z-index:2;
+  }
+  .rcard.c3:hover .ai-star{transform:rotate(180deg) scale(1.12)}
+  .ai-star svg{width:100%;height:100%;filter:drop-shadow(0 12px 30px rgba(98,95,255,.5))}
+  .ai-star::before{
+    content:"";position:absolute;inset:-20px;border-radius:50%;
+    background:radial-gradient(circle,rgba(98,95,255,.2),transparent 65%);
+    animation:glow 3s ease-in-out infinite;
+  }
+  @keyframes glow{
+    0%,100%{transform:scale(.9);opacity:.7}
+    50%{transform:scale(1.15);opacity:1}
+  }
+  .ai-star-inner{transition:transform .7s var(--ease)}
   .rcard.c3:hover .ai-star-inner{transform:rotate(-180deg)}
 
-  /* ============ HOW WE RATE ============ */
-  .how{padding:80px 0;background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .how-head{text-align:center;margin-bottom:48px}
-  .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .how-card{
-    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-    padding:24px;transition:transform .25s var(--ease),box-shadow .25s var(--ease),border-color .2s;
+  /* ── HOW WE RATE ── */
+  .how{
+    padding:80px 0;
+    background:var(--bg-1);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
   }
-  .how-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent-soft)}
+  .how-head{text-align:center;margin-bottom:48px}
+  .how-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .how-card{
+    background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:24px;transition:transform .25s var(--ease),box-shadow .25s,border-color .2s;
+  }
+  .how-card:hover{
+    transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.4);
+    border-color:rgba(0,187,127,.25);
+  }
   .how-ico{
-    width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent-2);
-    display:grid;place-items:center;font-size:22px;margin-bottom:14px;
-    transition:transform .3s var(--ease);
+    width:42px;height:42px;border-radius:12px;background:var(--accent-dim);
+    display:grid;place-items:center;font-size:20px;margin-bottom:14px;
+    transition:transform .3s var(--ease);border:1px solid rgba(0,187,127,.2);
   }
   .how-card:hover .how-ico{transform:rotate(-8deg) scale(1.08)}
-  .how-card h4{font-size:16px;font-weight:700;margin:0 0 6px}
-  .how-card p{font-size:14px;margin:0}
+  .how-card h4{font-size:15px;font-weight:700;margin:0 0 6px;color:var(--text)}
+  .how-card p{font-size:13px;margin:0;color:var(--text-soft)}
 
-  /* ============ TRUST ============ */
+  /* ── TRUST ── */
   .trust{padding:80px 0}
-  .trust-row{
-    display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;
-  }
+  .trust-row{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
   .trust h2{margin-bottom:18px}
   .trust ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:14px}
   .trust li{display:flex;gap:12px;align-items:flex-start;font-size:15px}
   .trust li .ck{
-    width:24px;height:24px;border-radius:8px;background:var(--green-soft);color:var(--green);
-    display:grid;place-items:center;flex-shrink:0;font-weight:800;
+    width:24px;height:24px;border-radius:8px;
+    background:var(--accent-dim);color:var(--accent);
+    display:grid;place-items:center;flex-shrink:0;font-weight:800;font-size:11px;
+    border:1px solid rgba(0,187,127,.2);
   }
   .trust li b{display:block;color:var(--text);font-weight:600;margin-bottom:2px}
   .trust li span{color:var(--text-soft);font-size:14px}
 
   .trust-vis{
-    position:relative;background:linear-gradient(135deg,#eff5ff,#f5f3ff);
-    border:1px solid var(--line);border-radius:var(--radius-lg);
+    position:relative;
+    background:var(--bg-1);border:1px solid var(--line);border-radius:var(--radius-xl);
     padding:36px;min-height:340px;display:grid;place-items:center;overflow:hidden;
   }
   .trust-vis::before{
     content:"";position:absolute;inset:0;
     background:
-      radial-gradient(circle at 20% 30%,rgba(37,99,235,.15),transparent 40%),
-      radial-gradient(circle at 80% 70%,rgba(124,58,237,.15),transparent 40%);
+      radial-gradient(circle at 20% 30%,rgba(0,187,127,.12),transparent 40%),
+      radial-gradient(circle at 80% 70%,rgba(98,95,255,.1),transparent 40%);
   }
   .review{
-    position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;
-    padding:18px 20px;width:100%;max-width:300px;
-    box-shadow:var(--shadow);transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+    position:relative;background:var(--bg-2);border:1px solid var(--line-2);
+    border-radius:var(--radius-lg);padding:18px 20px;width:100%;max-width:290px;
+    box-shadow:var(--shadow);
+    transition:transform .4s var(--ease),box-shadow .4s;
   }
-  .review-stack{position:relative;width:100%;max-width:340px;display:grid}
+  .review-stack{position:relative;width:100%;max-width:320px;display:grid;transition:transform .3s}
   .review-stack .review{grid-area:1/1}
-  .review-stack .review:nth-child(1){transform:translate(-12px,-18px) rotate(-4deg);opacity:.7}
-  .review-stack .review:nth-child(3){transform:translate(12px,18px) rotate(4deg);opacity:.7}
-  .review-stack:hover .review:nth-child(1){transform:translate(-28px,-32px) rotate(-7deg)}
-  .review-stack:hover .review:nth-child(3){transform:translate(28px,32px) rotate(7deg)}
-  .review-stack:hover .review:nth-child(2){transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .review-stack .review:nth-child(1){transform:translate(-12px,-18px) rotate(-4deg);opacity:.5}
+  .review-stack .review:nth-child(3){transform:translate(12px,18px) rotate(4deg);opacity:.5}
+  .review-stack:hover .review:nth-child(1){transform:translate(-28px,-34px) rotate(-7deg)}
+  .review-stack:hover .review:nth-child(3){transform:translate(28px,34px) rotate(7deg)}
+  .review-stack:hover .review:nth-child(2){transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.5)}
   .review-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
   .review-ava{
-    width:34px;height:34px;border-radius:50%;
-    background:linear-gradient(135deg,var(--accent),var(--accent-3));
-    color:#fff;display:grid;place-items:center;font-weight:700;font-size:14px;
+    width:32px;height:32px;border-radius:50%;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#020618;display:grid;place-items:center;font-weight:800;font-size:13px;
   }
-  .review-name{font-size:14px;font-weight:600}
-  .review-stars{color:#f59e0b;font-size:12px;letter-spacing:1px;margin-left:auto}
+  .review-name{font-size:13px;font-weight:600;color:var(--text)}
+  .review-stars{color:#f99c00;font-size:11px;letter-spacing:1px;margin-left:auto}
   .review p{font-size:13px;color:var(--text-soft);margin:0}
 
-  /* ============ FAQ ============ */
-  .faq{padding:80px 0;background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  /* ── FAQ ── */
+  .faq{
+    padding:80px 0;
+    background:var(--bg-1);
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  }
   .faq-head{text-align:center;margin-bottom:36px}
-  .acc{border:1px solid var(--line);border-radius:var(--radius);background:#fff;overflow:hidden;max-width:780px;margin:0 auto}
+  .acc{
+    border:1px solid var(--line);border-radius:var(--radius-lg);
+    background:var(--bg-2);overflow:hidden;max-width:780px;margin:0 auto;
+  }
   .acc-item{border-top:1px solid var(--line)}
   .acc-item:first-child{border-top:0}
   .acc-q{
     width:100%;text-align:left;background:transparent;border:0;padding:18px 22px;
-    font-size:15px;font-weight:600;color:var(--text);cursor:pointer;display:flex;align-items:center;gap:14px;
+    font-size:15px;font-weight:600;color:var(--text);cursor:pointer;
+    display:flex;align-items:center;gap:14px;
+    transition:background .15s;
   }
+  .acc-q:hover{background:rgba(255,255,255,.03)}
   .acc-q .ico{
-    width:26px;height:26px;border-radius:8px;background:var(--accent-soft);color:var(--accent-2);
-    display:grid;place-items:center;font-size:14px;flex-shrink:0;transition:transform .25s ease;
-    margin-left:auto;font-weight:800;
+    width:26px;height:26px;border-radius:8px;
+    background:var(--accent-dim);color:var(--accent);
+    display:grid;place-items:center;font-size:14px;flex-shrink:0;
+    transition:transform .25s ease;margin-left:auto;font-weight:800;
+    border:1px solid rgba(0,187,127,.2);
   }
   .acc-item[open] .acc-q .ico{transform:rotate(45deg)}
-  .acc-a{padding:0 22px 18px 22px;color:var(--text-soft);font-size:14px;line-height:1.6}
+  .acc-a{padding:0 22px 18px 22px;color:var(--text-soft);font-size:14px;line-height:1.65}
 
-  /* ============ CTA ============ */
+  /* ── CTA ── */
   .cta{padding:80px 0}
   .cta-card{
-    position:relative;border-radius:var(--radius-xl);
-    background:linear-gradient(135deg,var(--accent) 0%,var(--accent-3) 100%);
-    color:#fff;padding:56px;text-align:center;overflow:hidden;
+    position:relative;border-radius:var(--radius-2xl);
+    overflow:hidden;padding:60px;text-align:center;
+    background:linear-gradient(135deg,#002c22 0%,#020618 50%,#0d0a2a 100%);
+    border:1px solid rgba(0,187,127,.2);
   }
   .cta-card::before{
     content:"";position:absolute;inset:0;
     background:
-      radial-gradient(600px 300px at 20% 20%,rgba(255,255,255,.18),transparent 60%),
-      radial-gradient(500px 250px at 80% 80%,rgba(255,255,255,.12),transparent 60%);
+      radial-gradient(800px 400px at 50% -20%,rgba(0,187,127,.2),transparent 55%),
+      radial-gradient(600px 300px at 20% 80%,rgba(98,95,255,.12),transparent 50%),
+      radial-gradient(600px 300px at 80% 80%,rgba(0,165,239,.1),transparent 50%);
   }
-  .cta-card h2{position:relative;color:#fff;max-width:600px;margin:0 auto 14px}
-  .cta-card p{position:relative;color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 28px;font-size:17px}
-  .cta-actions{position:relative;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .cta-card .btn-primary{background:#fff;color:var(--accent-2);box-shadow:0 10px 30px rgba(0,0,0,.2)}
-  .cta-card .btn-primary:hover{background:#f1f5f9;color:var(--accent-2)}
-  .cta-card .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
-  .cta-card .btn-ghost:hover{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.7)}
+  .cta-card > *{position:relative}
+  .cta-card h2{color:var(--text);max-width:600px;margin:0 auto 14px}
+  .cta-card p{max-width:520px;margin:0 auto 28px;font-size:17px;color:var(--text-soft)}
+  .cta-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
 
-  /* ============ FOOTER ============ */
-  footer{padding:48px 0 32px;border-top:1px solid var(--line)}
+  /* ── FOOTER ── */
+  footer{padding:44px 0 28px;border-top:1px solid var(--line)}
   .foot-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
   .foot-row p{margin:0;font-size:13px;color:var(--muted)}
   .foot-links{display:flex;gap:18px}
-  .foot-links a{font-size:13px;color:var(--text-soft)}
+  .foot-links a{font-size:13px;color:var(--text-soft);transition:color .15s}
+  .foot-links a:hover{color:var(--accent)}
 
-  /* ============ RESPONSIVE ============ */
-  @media (max-width:880px){
+  /* ── RESPONSIVE ── */
+  @media (max-width:900px){
     h1{font-size:38px}
     h2{font-size:28px}
-    .hero{padding:48px 0 40px}
+    .hero{padding:56px 0 44px}
     .hero-stats{grid-template-columns:repeat(2,1fr)}
     .nav-links{display:none}
     .rcard{grid-template-columns:1fr}
     .rcard-body{padding:32px 28px}
-    .rcard-num{font-size:80px;top:14px;right:18px}
-    .rcard-visual{min-height:300px;order:-1}
+    .rcard-num{font-size:80px}
+    .rcard-visual{min-height:280px;order:-1}
     .how-grid{grid-template-columns:repeat(2,1fr)}
     .trust-row{grid-template-columns:1fr}
     .cta-card{padding:40px 24px}
   }
-  @media (max-width:520px){
-    .hero h1{font-size:32px}
-    .hero-stats{grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:540px){
+    h1{font-size:30px}
+    .hero-stats{grid-template-columns:1fr 1fr;gap:10px}
     .hero-stat{padding:14px}
     .hero-stat .num{font-size:22px}
-    .rcard h3{font-size:24px}
-    .vc-stack{transform:scale(.85)}
-    .esim-wrap{transform:scale(.85)}
-    .ai-wrap{transform:scale(.85)}
+    .rcard h3{font-size:22px}
+    .vc-stack,.esim-wrap,.ai-wrap{transform:scale(.82)}
   }
 </style>
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
+<!-- NAV -->
 <header class="nav">
   <div class="container nav-row">
-    <a class="logo" href="/">
+    <a class="logo" href="https://paybeam.ru/">
       <span class="logo-mark">P</span>
       Paybeam
     </a>
     <nav class="nav-links">
-      <a href="/cards">Виртуальные карты</a>
-      <a href="/esim">eSIM</a>
-      <a href="/services/chatgpt">Оплата сервисов</a>
+      <a href="https://paybeam.ru/cards">Виртуальные карты</a>
+      <a href="https://paybeam.ru/esim">eSIM</a>
+      <a href="https://paybeam.ru/services/chatgpt">Оплата сервисов</a>
       <a href="#how">Как мы оцениваем</a>
     </nav>
     <div class="nav-cta">
       <a href="#ratings" class="btn btn-ghost">Рейтинги</a>
-      <a href="#cta" class="btn btn-primary">Начать</a>
+      <a href="#cta" class="btn btn-primary">Начать →</a>
     </div>
   </div>
 </header>
 
-<!-- ============ HERO ============ -->
+<!-- HERO -->
 <section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
   <div class="container">
     <span class="hero-badge"><span class="pulse"></span>Данные обновлены сегодня</span>
-    <h1>Три рейтинга Paybeam <br/><span class="grad">для жизни без границ</span></h1>
-    <p class="hero-sub">Мы изучили десятки сервисов, проверили комиссии, KYC и страны — и собрали лучшие в трёх ключевых категориях. Без рекламы, только проверенные данные.</p>
+    <h1>Три рейтинга Paybeam<br><span class="grad">для жизни без границ</span></h1>
+    <p class="hero-sub">Изучили десятки сервисов, проверили комиссии и страны — собрали лучшие в трёх категориях. Без рекламы, только факты.</p>
     <div class="hero-actions">
       <a href="#ratings" class="btn btn-primary btn-lg">Смотреть рейтинги ↓</a>
       <a href="#how" class="btn btn-ghost btn-lg">Как мы оцениваем</a>
@@ -647,37 +712,35 @@
     <div class="hero-stats">
       <div class="hero-stat"><div class="num">60<span>+</span></div><div class="lbl">проверенных сервисов</div></div>
       <div class="hero-stat"><div class="num">190<span>+</span></div><div class="lbl">стран в покрытии eSIM</div></div>
-      <div class="hero-stat"><div class="num">24<span>ч</span></div><div class="lbl">обновляем данные</div></div>
+      <div class="hero-stat"><div class="num">24<span>ч</span></div><div class="lbl">частота обновлений</div></div>
       <div class="hero-stat"><div class="num">0<span>₽</span></div><div class="lbl">за пользование сайтом</div></div>
     </div>
   </div>
 </section>
 
-<!-- ============ RATING CARDS ============ -->
+<!-- RATING CARDS -->
 <section id="ratings" class="ratings">
   <div class="container">
     <div class="ratings-head">
       <span class="eyebrow">Три категории — три рейтинга</span>
-      <h2>Выберите то, что вам нужно прямо сейчас</h2>
-      <p>Каждый рейтинг — это независимое сравнение сервисов по комиссиям, покрытию, скорости и удобству.</p>
+      <h2>Выберите то, что нужно прямо сейчас</h2>
+      <p>Каждый рейтинг — независимое сравнение по комиссиям, покрытию, скорости и удобству.</p>
     </div>
 
     <div class="rating-grid">
 
-      <!-- ===== CARD 1: VIRTUAL CARDS ===== -->
-      <a class="rcard c1" href="/cards">
+      <!-- CARD 1: VIRTUAL CARDS -->
+      <a class="rcard c1" href="https://paybeam.ru/cards">
         <div class="rcard-body">
           <span class="rcard-num">01</span>
           <span class="rcard-eyebrow">💳 Финансы</span>
           <h3>Виртуальные карты для оплаты за рубежом</h3>
-          <p class="rcard-desc">Карты Visa и Mastercard, выпускаемые удалённо для россиян. Подходят для Apple, Steam, Netflix, отелей и магазинов по всему миру.</p>
-
+          <p class="rcard-desc">Visa и Mastercard, выпускаемые удалённо. Подходят для Apple, Steam, Netflix, отелей и магазинов по всему миру.</p>
           <div class="rcard-feats">
-            <div class="rcard-feat"><span class="ico">✓</span> Без KYC и с верификацией — на выбор</div>
-            <div class="rcard-feat"><span class="ico">✓</span> Пополнение через СБП, карту РФ или крипто</div>
-            <div class="rcard-feat"><span class="ico">✓</span> Сравнение по комиссиям и срокам</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Без KYC или с верификацией — на выбор</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Пополнение через СБП, карту РФ или крипто</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Сравнение комиссий и сроков действия</div>
           </div>
-
           <div class="rcard-top">
             <div>
               <div class="label">№1 в рейтинге</div>
@@ -685,20 +748,19 @@
             </div>
             <div class="stars">★★★★★</div>
           </div>
-
           <div class="rcard-cta">
             <span class="btn btn-primary">Открыть рейтинг карт →</span>
             <span class="btn btn-ghost">15 сервисов</span>
           </div>
         </div>
-
         <div class="rcard-visual">
           <div class="vc-stack">
             <div class="vc vc-3"></div>
             <div class="vc vc-2"></div>
             <div class="vc vc-1">
+              <div class="vc-shine"></div>
               <div class="vc-chip"></div>
-              <div class="vc-wave"></div>
+              <div class="vc-nfc"></div>
               <div class="vc-num">5421 •••• •••• 8842</div>
               <div class="vc-name">Paybeam Card</div>
               <div class="vc-brand">VISA</div>
@@ -717,20 +779,18 @@
         </div>
       </a>
 
-      <!-- ===== CARD 2: ESIM ===== -->
-      <a class="rcard c2" href="/esim">
+      <!-- CARD 2: ESIM -->
+      <a class="rcard c2" href="https://paybeam.ru/esim">
         <div class="rcard-body">
           <span class="rcard-num">02</span>
           <span class="rcard-eyebrow">📡 Связь</span>
           <h3>eSIM для путешествий и удалёнки</h3>
-          <p class="rcard-desc">Виртуальные сим-карты, которые активируются за минуту по QR. Интернет и связь в 190+ странах без роуминга.</p>
-
+          <p class="rcard-desc">Виртуальные сим-карты, которые активируются за минуту по QR-коду. Интернет в 190+ странах без роуминга.</p>
           <div class="rcard-feats">
-            <div class="rcard-feat"><span class="ico">✓</span> Тарифы от 59₽ — посуточно или пакетами</div>
-            <div class="rcard-feat"><span class="ico">✓</span> Активация прямо в iPhone и Android</div>
-            <div class="rcard-feat"><span class="ico">✓</span> Региональные и глобальные планы</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Тарифы от 59₽ — посуточно или пакетами</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Активация прямо в iPhone и Android</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Региональные и глобальные планы</div>
           </div>
-
           <div class="rcard-top">
             <div>
               <div class="label">№1 в рейтинге</div>
@@ -738,13 +798,11 @@
             </div>
             <div class="stars">★★★★★</div>
           </div>
-
           <div class="rcard-cta">
             <span class="btn btn-primary">Открыть рейтинг eSIM →</span>
             <span class="btn btn-ghost">12 сервисов</span>
           </div>
         </div>
-
         <div class="rcard-visual">
           <div class="esim-wrap">
             <div class="esim-orbit o1">
@@ -762,26 +820,26 @@
             <div class="esim-signal"></div>
             <div class="esim-signal"></div>
             <div class="esim-chip">
-              <div class="esim-lines"></div>
+              <div class="esim-chip-inner">
+                <span class="esim-label">eSIM</span>
+              </div>
             </div>
           </div>
         </div>
       </a>
 
-      <!-- ===== CARD 3: SERVICES / AI ===== -->
-      <a class="rcard c3" href="/services/chatgpt">
+      <!-- CARD 3: SERVICES / AI -->
+      <a class="rcard c3" href="https://paybeam.ru/services/chatgpt">
         <div class="rcard-body">
           <span class="rcard-num">03</span>
           <span class="rcard-eyebrow">⚡ Платежи</span>
           <h3>Оплата зарубежных сервисов</h3>
-          <p class="rcard-desc">Посредники, через которых вы оплачиваете ChatGPT Plus, Spotify, Netflix, Steam и десятки других сервисов из России — рублями.</p>
-
+          <p class="rcard-desc">Посредники для оплаты ChatGPT Plus, Spotify, Netflix, Steam и других — рублями, без VPN и иностранных карт.</p>
           <div class="rcard-feats">
-            <div class="rcard-feat"><span class="ico">✓</span> Комиссии от 3% — выбираем самые низкие</div>
-            <div class="rcard-feat"><span class="ico">✓</span> Оплата картой РФ, СБП, МИР</div>
-            <div class="rcard-feat"><span class="ico">✓</span> Без VPN, без иностранных карт</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Комиссии от 3% — выбираем самые низкие</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Оплата картой РФ, СБП, МИР</div>
+            <div class="rcard-feat"><span class="ico">✓</span>Без VPN, без иностранных карт</div>
           </div>
-
           <div class="rcard-top">
             <div>
               <div class="label">№1 в рейтинге</div>
@@ -789,13 +847,11 @@
             </div>
             <div class="stars">★★★★★</div>
           </div>
-
           <div class="rcard-cta">
-            <span class="btn btn-primary">Открыть рейтинг сервисов →</span>
+            <span class="btn btn-primary">Открыть рейтинг →</span>
             <span class="btn btn-ghost">30+ сервисов</span>
           </div>
         </div>
-
         <div class="rcard-visual">
           <div class="ai-wrap">
             <div class="ai-ray"></div>
@@ -804,25 +860,23 @@
             <div class="ai-ray"></div>
             <div class="ai-ray"></div>
             <div class="ai-ray"></div>
-
             <div class="ai-svc s1">AI</div>
             <div class="ai-svc s2">♫</div>
             <div class="ai-svc s3">▶</div>
             <div class="ai-svc s4">𝕏</div>
             <div class="ai-svc s5">f</div>
             <div class="ai-svc s6">⛇</div>
-
             <div class="ai-star">
               <div class="ai-star-inner">
                 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stop-color="#2563eb"/>
-                      <stop offset="100%" stop-color="#7c3aed"/>
+                      <stop offset="0%" stop-color="#625fff"/>
+                      <stop offset="100%" stop-color="#ac4bff"/>
                     </linearGradient>
                   </defs>
                   <path fill="url(#g1)" d="M50 5 L58 38 L92 42 L66 60 L75 92 L50 73 L25 92 L34 60 L8 42 L42 38 Z"/>
-                  <circle cx="50" cy="50" r="8" fill="#fff" opacity=".95"/>
+                  <circle cx="50" cy="50" r="7" fill="#020618" opacity=".6"/>
                 </svg>
               </div>
             </div>
@@ -834,7 +888,7 @@
   </div>
 </section>
 
-<!-- ============ HOW WE RATE ============ -->
+<!-- HOW WE RATE -->
 <section id="how" class="how">
   <div class="container">
     <div class="how-head">
@@ -850,7 +904,7 @@
       </div>
       <div class="how-card">
         <div class="how-ico">🛡️</div>
-        <h4>Проверка надёжности</h4>
+        <h4>Надёжность</h4>
         <p>Изучаем отзывы, срок работы, юрлицо и реальные кейсы пользователей.</p>
       </div>
       <div class="how-card">
@@ -867,7 +921,7 @@
   </div>
 </section>
 
-<!-- ============ TRUST / REVIEWS ============ -->
+<!-- TRUST -->
 <section class="trust">
   <div class="container">
     <div class="trust-row">
@@ -877,7 +931,7 @@
         <ul>
           <li>
             <span class="ck">✓</span>
-            <div><b>Только проверенные данные</b><span>Каждый сервис мы тестируем сами — переводим реальные деньги и фиксируем результат.</span></div>
+            <div><b>Только проверенные данные</b><span>Каждый сервис тестируем сами — переводим реальные деньги и фиксируем результат.</span></div>
           </li>
           <li>
             <span class="ck">✓</span>
@@ -885,7 +939,7 @@
           </li>
           <li>
             <span class="ck">✓</span>
-            <div><b>Ежедневные обновления</b><span>Курсы, комиссии и статусы сервисов проверяются каждый день командой Paybeam.</span></div>
+            <div><b>Ежедневные обновления</b><span>Курсы, комиссии и статусы проверяются каждый день командой Paybeam.</span></div>
           </li>
           <li>
             <span class="ck">✓</span>
@@ -893,7 +947,6 @@
           </li>
         </ul>
       </div>
-
       <div class="trust-vis">
         <div class="review-stack">
           <div class="review">
@@ -926,7 +979,7 @@
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
+<!-- FAQ -->
 <section class="faq">
   <div class="container">
     <div class="faq-head">
@@ -935,60 +988,54 @@
     </div>
     <div class="acc">
       <details class="acc-item" open>
-        <summary class="acc-q">Чем отличается Paybeam от обычного посредника?<span class="ico">+</span></summary>
-        <div class="acc-a">Paybeam не продаёт сервисы — мы их сравниваем. У нас вы выбираете лучший вариант из проверенных, а покупку делаете напрямую у выбранной компании.</div>
+        <summary class="acc-q">Чем Paybeam отличается от обычного посредника?<span class="ico">+</span></summary>
+        <div class="acc-a">Paybeam не продаёт сервисы — мы их сравниваем. Вы выбираете лучший вариант, а покупку делаете напрямую у выбранной компании.</div>
       </details>
       <details class="acc-item">
         <summary class="acc-q">Как часто обновляются рейтинги?<span class="ico">+</span></summary>
-        <div class="acc-a">Цены и статусы — ежедневно, состав рейтинга — раз в неделю. Если сервис закрылся или сломался, удаляем сразу.</div>
+        <div class="acc-a">Цены и статусы — ежедневно, состав рейтинга — раз в неделю. Если сервис закрылся или сломался — удаляем сразу.</div>
       </details>
       <details class="acc-item">
         <summary class="acc-q">Безопасно ли пользоваться этими сервисами?<span class="ico">+</span></summary>
-        <div class="acc-a">Все сервисы в рейтинге работают официально и принимают платежи через лицензированных провайдеров. Но мы всегда рекомендуем начать с минимальной суммы, чтобы убедиться.</div>
+        <div class="acc-a">Все сервисы в рейтинге работают официально через лицензированных провайдеров. Рекомендуем начать с минимальной суммы, чтобы убедиться самому.</div>
       </details>
       <details class="acc-item">
-        <summary class="acc-q">Можно ли оплатить ChatGPT с карты Paybeam?<span class="ico">+</span></summary>
-        <div class="acc-a">Да — выпускаете виртуальную карту из нашего рейтинга, привязываете её в OpenAI и оплачиваете подписку напрямую. Это удобнее, чем разовый посредник, если планируете пользоваться долго.</div>
+        <summary class="acc-q">Можно ли оплатить ChatGPT с виртуальной карты из рейтинга?<span class="ico">+</span></summary>
+        <div class="acc-a">Да — выпускаете карту, привязываете в OpenAI и оплачиваете напрямую. Это удобнее посредника, если планируете пользоваться долго.</div>
       </details>
       <details class="acc-item">
         <summary class="acc-q">Что делать, если сервис из рейтинга не сработал?<span class="ico">+</span></summary>
-        <div class="acc-a">Напишите нам в поддержку — мы поможем разобраться и предложим альтернативу из нашего же рейтинга. Если проблема системная — обновим оценку.</div>
+        <div class="acc-a">Напишите нам в поддержку — поможем разобраться и предложим альтернативу. Если проблема системная — обновим оценку.</div>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ============ CTA ============ -->
+<!-- CTA -->
 <section id="cta" class="cta">
   <div class="container">
     <div class="cta-card">
       <h2>Не знаете, с чего начать?</h2>
-      <p>Ответьте на 3 вопроса — подберём вам нужный сервис из всех трёх рейтингов за минуту.</p>
+      <p>Ответьте на 3 вопроса — подберём нужный сервис из всех трёх рейтингов за минуту.</p>
       <div class="cta-actions">
-        <a href="#ratings" class="btn btn-primary btn-lg">Подобрать сервис</a>
-        <a href="/" class="btn btn-ghost btn-lg">На главную Paybeam</a>
+        <a href="https://paybeam.ru/cards" class="btn btn-primary btn-lg">Подобрать сервис</a>
+        <a href="https://paybeam.ru/" class="btn btn-ghost btn-lg">На главную Paybeam</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- FOOTER -->
 <footer>
   <div class="container foot-row">
-    <p>© Paybeam, {{year}}. Сравниваем — не продаём.</p>
+    <p>© Paybeam, <span id="yr"></span>. Сравниваем — не продаём.</p>
     <div class="foot-links">
-      <a href="/cards">Карты</a>
-      <a href="/esim">eSIM</a>
-      <a href="/services/chatgpt">Сервисы</a>
-      <a href="/contacts">Контакты</a>
+      <a href="https://paybeam.ru/cards">Карты</a>
+      <a href="https://paybeam.ru/esim">eSIM</a>
+      <a href="https://paybeam.ru/services/chatgpt">Сервисы</a>
     </div>
   </div>
 </footer>
-
-<script>
-  document.querySelector('footer p').innerHTML =
-    document.querySelector('footer p').innerHTML.replace('{{year}}', new Date().getFullYear());
-</script>
-
+<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
 </body>
 </html>
